@@ -1,35 +1,35 @@
 package com.example.softclinic.model;
 
 public class Administrador {
-    private String name;
-    private String minit;
+    private String nome;
+    private String sobrenome;
     private String cpf;
     private String data_nascimento;
-    private String sex;
-    private String numberCTPS;
+    private String sexo;
+    private String numeroCTPS;
 
-    public String getNumberCTPS() {
-        return numberCTPS;
+    public String getnumeroCTPS() {
+        return numeroCTPS;
     }
 
-    public void setNumberCTPS(String numberCTPS) {
-        this.numberCTPS = numberCTPS;
+    public void setnumeroCTPS(String numeroCTPS) {
+        this.numeroCTPS = numeroCTPS;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getMinit() {
-        return minit;
+    public String getSobrenome() {
+        return sobrenome;
     }
 
-    public void setMinit(String minit) {
-        this.minit = minit;
+    public void setsobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
     public String getCpf() {
@@ -48,11 +48,11 @@ public class Administrador {
         this.data_nascimento = data_nascimento;
     }
 
-    public String getSex() {
-        return sex;
+    public String getSexo() {
+        return sexo;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 }

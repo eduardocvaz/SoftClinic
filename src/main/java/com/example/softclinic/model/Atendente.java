@@ -1,36 +1,41 @@
 package com.example.softclinic.model;
 
 public class Atendente{
-    private String name;
-    private String minit;
+    private String nome;
+    private String sobrenome;
     private String cpf;
     private String data_nascimento;
-    private int ctps;
-    private String sex;
+    private int numeroCTPS;
+    private String sexo;
 
-    public String getName() {
-        return name;
+    public Atendente(String nome, String sobrenome, String cpf, String data_nascimento, int numeroCTPS, String sexo) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.cpf = cpf;
+        this.data_nascimento = data_nascimento;
+        this.numeroCTPS = numeroCTPS;
+        this.sexo = sexo;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getNome() {
+        return nome;
     }
 
-
-    public String getMinit() {
-        return minit;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-
-    public void setMinit(String minit) {
-        this.minit = minit;
+    public String getSobrenome() {
+        return sobrenome;
     }
 
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
 
     public String getCpf() {
         return cpf;
     }
-
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
@@ -44,20 +49,19 @@ public class Atendente{
         this.data_nascimento = data_nascimento;
     }
 
-    public int getCtps() {
-        return ctps;
+    public int getNumeroCTPS() {
+        return numeroCTPS;
     }
 
-    public void setCtps(int ctps) {
-        this.ctps = ctps;
+    public void setNumeroCTPS(int numeroCTPS) {
+        this.numeroCTPS = numeroCTPS;
     }
 
-    public String getSex() {
-        return sex;
+    public String getSexo() {
+        return sexo;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
-
 }
