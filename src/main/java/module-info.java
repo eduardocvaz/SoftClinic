@@ -6,6 +6,10 @@ module com.example.softclinic {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.example.softclinic to javafx.fxml;
-    exports com.example.softclinic;
+    exports com.example.softclinic.model;
+    opens com.example.softclinic.model to javafx.fxml;
+    exports com.example.softclinic.controller;
+    opens com.example.softclinic.controller to javafx.fxml;
+    exports com.example.softclinic.application;
+    opens com.example.softclinic.application to javafx.fxml;
 }

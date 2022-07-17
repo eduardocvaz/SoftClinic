@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.softclinic.controller.LoginController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="133.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="336.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="127.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="127.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="246.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="246.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="162.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="userLogin" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label text="User" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets top="100.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <children>
+            <Button fx:id="loginCancel" mnemonicParsing="false" onAction="#cancelLogin" text="Cancelar">
+               <HBox.margin>
+                  <Insets left="50.0" right="50.0" top="50.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="loginEnter" mnemonicParsing="false" onAction="#enterProgramButton" text="Entrar">
+               <HBox.margin>
+                  <Insets left="50.0" top="50.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </HBox>
+      <PasswordField fx:id="userPassword" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   </children>
+</GridPane>

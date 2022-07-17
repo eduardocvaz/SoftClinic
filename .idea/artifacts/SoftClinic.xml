@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="SoftClinic">
+    <output-path>$PROJECT_DIR$/out/artifacts/SoftClinic</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.example.softclinic.application.LoginApplication" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="SoftClinic.jar">
+        <element id="module-output" name="SoftClinic" />
+      </element>
+    </root>
+  </artifact>
+</component>
