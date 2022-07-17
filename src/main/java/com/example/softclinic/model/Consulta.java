@@ -4,38 +4,17 @@ public class Consulta {
     private int idConsulta;
     private String horario;
     private String dia;
-    private String atendente_cpf;
+    private Atendente atendente;
     private Medico medico;
-    private String paciente_cpf;
+    private Paciente paciente;
 
-    public String getAtendente_cpf() {
-        return atendente_cpf;
-    }
-
-    public void setAtendente_cpf(String atendente_cpf) {
-        this.atendente_cpf = atendente_cpf;
-    }
-
-    public Medico getMedico() {
-        return medico;
-    }
-
-    public void setMedico(Medico medico) {
-        this.medico = medico;
-    }
-
-    public String getPaciente_cpf() {
-        return paciente_cpf;
-    }
-
-    public void setPaciente_cpf(String paciente_cpf) {
-        this.paciente_cpf = paciente_cpf;
-    }
-
-    public Consulta(int idConsulta, String horario, String dia) {
+    public Consulta(int idConsulta, String horario, String dia, Atendente atendente, Medico medico, Paciente paciente) {
         this.idConsulta = idConsulta;
         this.horario = horario;
         this.dia = dia;
+        this.atendente = atendente;
+        this.medico = medico;
+        this.paciente = paciente;
     }
 
     public int getIdConsulta() {
@@ -60,5 +39,29 @@ public class Consulta {
 
     public void setDia(String dia) {
         this.dia = dia;
+    }
+
+    public Atendente getAtendente() {
+        return atendente;
+    }
+
+    public void setAtendente(Atendente atendente) {
+        this.atendente = atendente;
+    }
+
+    public Medico getMedico() {
+        return medico;
+    }
+
+    public void setMedico(Medico medico) {
+        this.medico = medico;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
     }
 }
