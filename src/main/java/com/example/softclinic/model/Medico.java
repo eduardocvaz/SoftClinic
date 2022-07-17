@@ -1,40 +1,40 @@
 package com.example.softclinic.model;
 
 public class Medico {
-    private String name;
-    private String minit;
+    private String nome;
+    private String sobrenome;
     private String cpf;
     private String data_nascimento;
-    private int ctps;
+    private int numeroCTPS;
     private String cr;
-    private String sex;
+    private String sexo;
     private String especialidade;
 
-    public Medico(String name, String minit, String cpf, String data_nascimento, int ctps, String cr, String sex, String especialidade) {
-        this.name = name;
-        this.minit = minit;
+    public Medico(String nome, String sobrenome, String cpf, String data_nascimento, int numeroCTPS, String cr, String sexo, String especialidade) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.data_nascimento = data_nascimento;
-        this.ctps = ctps;
+        this.numeroCTPS = numeroCTPS;
         this.cr = cr;
-        this.sex = sex;
+        this.sexo = sexo;
         this.especialidade = especialidade;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public String getMinit() {
-        return minit;
+    public String getSobrenome() {
+        return sobrenome;
     }
 
-    public void setMinit(String minit) {
-        this.minit = minit;
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
     public String getCpf() {
@@ -53,12 +53,12 @@ public class Medico {
         this.data_nascimento = data_nascimento;
     }
 
-    public int getCtps() {
-        return ctps;
+    public int getNumeroCTPS() {
+        return numeroCTPS;
     }
 
-    public void setCtps(int ctps) {
-        this.ctps = ctps;
+    public void setNumeroCTPS(int numeroCTPS) {
+        this.numeroCTPS = numeroCTPS;
     }
 
     public String getCr() {
@@ -69,12 +69,12 @@ public class Medico {
         this.cr = cr;
     }
 
-    public String getSex() {
-        return sex;
+    public String getSexo() {
+        return sexo;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
     public String getEspecialidade() {
