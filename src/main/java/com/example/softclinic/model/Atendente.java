@@ -6,7 +6,20 @@ public class Atendente{
     private String cpf;
     private String data_nascimento;
     private int numeroCTPS;
+    private String telefone;
     private String sexo;
+
+    public int getNumeroCTPS() {
+        return numeroCTPS;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
 
     public Atendente(String nome, String sobrenome, String cpf, String data_nascimento, int numeroCTPS, String sexo) {
         this.nome = nome;
@@ -15,6 +28,10 @@ public class Atendente{
         this.data_nascimento = data_nascimento;
         this.numeroCTPS = numeroCTPS;
         this.sexo = sexo;
+    }
+
+    public Atendente() {
+
     }
 
     public String getNome() {
@@ -49,7 +66,7 @@ public class Atendente{
         this.data_nascimento = data_nascimento;
     }
 
-    public int getNumeroCTPS() {
+    public int getNumeroCTPS(int numeroctps) {
         return numeroCTPS;
     }
 
