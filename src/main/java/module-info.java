@@ -5,6 +5,7 @@ module com.example.softclinic {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
+    requires java.sql;
 
     exports com.example.softclinic.model;
     opens com.example.softclinic.model to javafx.fxml;

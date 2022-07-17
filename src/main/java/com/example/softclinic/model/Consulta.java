@@ -5,7 +5,7 @@ public class Consulta {
     private String horario;
     private String dia;
     private String atendente_cpf;
-    private String medico_cpf;
+    private Medico medico;
     private String paciente_cpf;
 
     public String getAtendente_cpf() {
@@ -16,12 +16,12 @@ public class Consulta {
         this.atendente_cpf = atendente_cpf;
     }
 
-    public String getMedico_cpf() {
-        return medico_cpf;
+    public Medico getMedico() {
+        return medico;
     }
 
-    public void setMedico_cpf(String medico_cpf) {
-        this.medico_cpf = medico_cpf;
+    public void setMedico(Medico medico) {
+        this.medico = medico;
     }
 
     public String getPaciente_cpf() {
