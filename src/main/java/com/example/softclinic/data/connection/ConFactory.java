@@ -14,7 +14,7 @@ public class ConFactory {
 
     private static Connection con;
 
-    private ConFactory() throws ClassNotFoundException {
+    public ConFactory() throws ClassNotFoundException {
         String url;
         String user;
         String password;
@@ -32,13 +32,13 @@ public class ConFactory {
             e.printStackTrace();
         }
     }
-    public static ConFactory getInstance() throws ClassNotFoundException {
+    public ConFactory getInstance() throws ClassNotFoundException {
         if(instance == null) {
             instance = new ConFactory();
         }
         return instance;
     }
-    public static Connection conexao() throws ClassNotFoundException, SQLException {
+    public Connection conexao() throws ClassNotFoundException, SQLException {
         return con;
     }
 

@@ -5,20 +5,26 @@ public class Medico {
     private String sobrenome;
     private String cpf;
     private String data_nascimento;
+    private String telefone;
     private int numeroCTPS;
     private String cr;
     private String sexo;
     private String especialidade;
 
-    public Medico(String nome, String sobrenome, String cpf, String data_nascimento, int numeroCTPS, String cr, String sexo, String especialidade) {
+    public Medico(String cpf,String nome, String sobrenome, String data_nascimento, String telefone, int numeroCTPS, String cr, String sexo, String especialidade) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.data_nascimento = data_nascimento;
+        this.telefone = telefone;
         this.numeroCTPS = numeroCTPS;
         this.cr = cr;
         this.sexo = sexo;
         this.especialidade = especialidade;
+    }
+
+    public Medico() {
+
     }
 
     public String getNome() {
@@ -83,5 +89,28 @@ public class Medico {
 
     public void setEspecialidade(String especialidade) {
         this.especialidade = especialidade;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    @Override
+    public String toString() {
+        return "Medico{" +
+                "nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", data_nascimento='" + data_nascimento + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", numeroCTPS=" + numeroCTPS +
+                ", cr='" + cr + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", especialidade='" + especialidade + '\'' +
+                '}';
     }
 }
