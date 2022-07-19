@@ -5,7 +5,15 @@ public class Exame {
     private String resultado;
     private String tipo;
     private Boolean sigilo;
-    private int idProtuario;
+
+    public Exame(String resultado, String tipo, Boolean sigilo) {
+        this.resultado = resultado;
+        this.tipo = tipo;
+        this.sigilo = sigilo;
+    }
+
+    public Exame() {
+    }
 
     public int getIdExame() {
         return idExame;
@@ -39,11 +47,13 @@ public class Exame {
         this.sigilo = sigilo;
     }
 
-    public int getIdProtuario() {
-        return idProtuario;
-    }
-
-    public void setIdProtuario(int idProtuario) {
-        this.idProtuario = idProtuario;
+    @Override
+    public String toString() {
+        return "Exame{" +
+                "idExame=" + idExame +
+                ", resultado='" + resultado + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", sigilo=" + sigilo +
+                '}';
     }
 }

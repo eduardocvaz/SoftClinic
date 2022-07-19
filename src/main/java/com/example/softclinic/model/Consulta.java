@@ -8,13 +8,16 @@ public class Consulta {
     private Medico medico;
     private Paciente paciente;
 
-    public Consulta(int idConsulta, String horario, String dia, Atendente atendente, Medico medico, Paciente paciente) {
-        this.idConsulta = idConsulta;
+    public Consulta( String horario, String dia, Atendente atendente, Medico medico, Paciente paciente) {
         this.horario = horario;
         this.dia = dia;
         this.atendente = atendente;
         this.medico = medico;
         this.paciente = paciente;
+    }
+
+    public Consulta() {
+
     }
 
     public int getIdConsulta() {
@@ -63,5 +66,17 @@ public class Consulta {
 
     public void setPaciente(Paciente paciente) {
         this.paciente = paciente;
+    }
+
+    @Override
+    public String toString() {
+        return "Consulta{" +
+                "idConsulta=" + idConsulta +
+                ", horario='" + horario + '\'' +
+                ", dia='" + dia + '\'' +
+                ", atendente=" + atendente +
+                ", medico=" + medico +
+                ", paciente=" + paciente +
+                '}';
     }
 }

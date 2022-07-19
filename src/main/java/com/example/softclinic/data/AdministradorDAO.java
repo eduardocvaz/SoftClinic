@@ -18,16 +18,14 @@ public class AdministradorDAO {
         Administrador administrador = new Administrador();
         try{
             conectar();
-            String sql ="SELECT * FROM PACIENTE WHERE cpf =" + this.retornaValorStringBD(cpf);
+            String sql ="SELECT * FROM administrador WHERE cpf =" + this.retornaValorStringBD(cpf);
             System.out.println("%"+sql+"%");
             ResultSet rs = comando.executeQuery(sql);
             if (rs.next()){
                 administrador = this.buildAdministrador(rs);
                 System.out.println(administrador.getNome());
             }
-        }catch(SQLException e){
-            e.printStackTrace();
-        }catch(ClassNotFoundException e){
+        }catch(SQLException | ClassNotFoundException e){
             e.printStackTrace();
         }
         return administrador;
@@ -43,6 +41,8 @@ public class AdministradorDAO {
                 Administrador e = this.buildAdministrador(rs);
                 adm.add(e);
             }
+            fechar();
+            return adm;
         } catch (SQLException | ClassNotFoundException e){
             e.printStackTrace();
         }
@@ -64,7 +64,7 @@ public class AdministradorDAO {
             conectar();
 
             StringBuffer buffer = new StringBuffer();
-            buffer.append("INSERT INTO ADMINISTRATOR (");
+            buffer.append("INSERT INTO administrador (");
             buffer.append(this.retornarCamposBD());
             buffer.append(") VALUES (");
             buffer.append(retornarValoresBD(administrador));
@@ -83,7 +83,7 @@ public class AdministradorDAO {
         try {
             conectar();
             StringBuffer buffer = new StringBuffer();
-            buffer.append("UPDATE medico SET ");
+            buffer.append("UPDATE administrador SET ");
             buffer.append(returnFieldValuesBD(administrador));
             buffer.append(" WHERE CPF=");
             buffer.append(this.retornarValorStringBD(administrador.getCpf()));
@@ -111,6 +111,8 @@ public class AdministradorDAO {
         buffer.append(retornarValorStringBD(e.getTelefone()));
         buffer.append(", sexo=");
         buffer.append(retornarValorStringBD(e.getSexo()));
+        buffer.append(", numeroctps=");
+        buffer.append(e.getNumeroCTPS());
         return buffer.toString();
     }
 
@@ -126,7 +128,9 @@ public class AdministradorDAO {
                         + ", "
                         + retornarValorStringBD(e.getTelefone())
                         + ", "
-                        + retornarValorStringBD(e.getSexo());
+                        + retornarValorStringBD(e.getSexo())
+                        + ", "
+                        + e.getNumeroCTPS();
     }
 
     private String retornarValorStringBD(String valor) {
@@ -139,7 +143,7 @@ public class AdministradorDAO {
         return retorno;
     }
     private String retornarCamposBD() {
-        return "cpf, nome, sobrenome, data_nascimento, telefone, sexo";
+        return "cpf, nome, sobrenome, data_nascimento, telefone, sexo, numeroctps";
     }
 
     private void fechar() {
@@ -175,6 +179,7 @@ public class AdministradorDAO {
             administrador.setData_nascimento(rs.getDate("data_nascimento").toString());
             administrador.setSexo(rs.getString("sexo"));
             administrador.setTelefone(rs.getString("telefone"));
+            administrador.setNumeroCTPS(rs.getInt("numeroctps"));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

@@ -25,9 +25,7 @@ public class PacienteDAO {
                 paciente = this.buildPaciente(rs);
                 System.out.println(paciente.getNome());
             }
-        }catch(SQLException e){
-            e.printStackTrace();
-        }catch(ClassNotFoundException e){
+        }catch(SQLException | ClassNotFoundException e){
             e.printStackTrace();
         }
         return paciente;
@@ -43,6 +41,8 @@ public class PacienteDAO {
                 Paciente e = this.buildPaciente(rs);
                 pac.add(e);
             }
+            fechar();
+            return pac;
         } catch (SQLException | ClassNotFoundException e){
             e.printStackTrace();
         }
@@ -64,7 +64,7 @@ public class PacienteDAO {
             conectar();
 
             StringBuffer buffer = new StringBuffer();
-            buffer.append("INSERT INTO PACIENT (");
+            buffer.append("INSERT INTO paciente (");
             buffer.append(this.retornarCamposBD());
             buffer.append(") VALUES (");
             buffer.append(retornarValoresBD(paciente));

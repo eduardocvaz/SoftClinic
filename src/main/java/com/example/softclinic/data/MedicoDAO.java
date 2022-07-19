@@ -26,9 +26,7 @@ public class MedicoDAO {
                 System.out.println(medico.getNome());
             }
             fechar();
-        } catch(SQLException e){
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch(SQLException | ClassNotFoundException e){
             e.printStackTrace();
         }
         return medico;
@@ -39,7 +37,7 @@ public class MedicoDAO {
             conectar();
             String sql = "SELECT * FROM medico";
             ResultSet rs = comando.executeQuery(sql);
-            List<Medico> meds = new ArrayList<Medico>();
+            List<Medico> meds = new ArrayList<>();
             while (rs.next()){
                 Medico e = this.buildMedico(rs);
                 meds.add(e);
