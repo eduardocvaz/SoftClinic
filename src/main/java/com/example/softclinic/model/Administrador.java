@@ -6,14 +6,18 @@ public class Administrador {
     private String cpf;
     private String data_nascimento;
     private String sexo;
-    private String numeroCTPS;
+    private String telefone;
 
-    public String getnumeroCTPS() {
-        return numeroCTPS;
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
-    public void setnumeroCTPS(String numeroCTPS) {
-        this.numeroCTPS = numeroCTPS;
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public String getNome() {
