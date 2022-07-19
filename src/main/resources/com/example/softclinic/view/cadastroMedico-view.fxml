@@ -60,7 +60,7 @@
             </DatePicker>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER">
                <children>
-                  <RadioButton fx:id="atendenteSexoH" mnemonicParsing="false" text="Homem">
+                  <RadioButton fx:id="medicoSexoH" mnemonicParsing="false" text="Homem">
                      <HBox.margin>
                         <Insets left="13.0" top="3.0" />
                      </HBox.margin>
@@ -68,7 +68,7 @@
                         <ToggleGroup fx:id="sexo" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="atendenteSexoM" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Mulher" toggleGroup="$sexo">
+                  <RadioButton fx:id="medicoSexoM" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Mulher" toggleGroup="$sexo">
                      <HBox.margin>
                         <Insets left="15.0" top="3.0" />
                      </HBox.margin>
@@ -108,7 +108,7 @@
       </GridPane>
       <Pane layoutY="-1.0" prefHeight="81.0" prefWidth="638.0">
          <children>
-            <Text layoutX="189.0" layoutY="50.0" strokeWidth="0.0" text="Cadastro Atendente" wrappingWidth="260.4599609375">
+            <Text layoutX="189.0" layoutY="50.0" strokeWidth="0.0" text="Cadastro Medico" wrappingWidth="260.4599609375">
                <font>
                   <Font size="24.0" />
                </font>

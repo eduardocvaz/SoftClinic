@@ -6,33 +6,27 @@ import javafx.scene.control.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class CadastroMedicoController {
+public class CadastroPacienteController {
     @FXML
-    private TextField medicoNome;
+    private TextField pacienteNome;
 
     @FXML
-    private TextField medicoCpf;
+    private TextField pacienteCpf;
 
     @FXML
-    private TextField medicoCtps;
+    private DatePicker pacienteData;
 
     @FXML
-    private DatePicker medicoData;
-
-    @FXML
-    private RadioButton medicoSexoH;
+    private RadioButton pacienteSexoH;
 
     @FXML
     private ToggleGroup sexo;
 
     @FXML
-    private RadioButton medicoSexoM;
+    private RadioButton pacienteSexoM;
 
     @FXML
-    private TextField medicoTelefone;
-
-    @FXML
-    private TextField medicoCr;
+    private TextField pacienteTelefone;
 
     @FXML
     private Button botaoCadastrar;
@@ -44,14 +38,12 @@ public class CadastroMedicoController {
     private Button botaoCancelar;
 
     @FXML
-    void cadastrarMedico( ) {
+    void cadastrarPaciente( ) {
         RadioButton radio = (RadioButton) sexo.getSelectedToggle();
         String sexo = radio.getText();
-        String cpf= medicoCpf.getText();
-        String ctps=medicoCtps.getText();
-        String cr=medicoCr.getText();
-        String telefone=medicoTelefone.getText();
-        String arrayNome [] = medicoNome.getText().split(" ");
+        String cpf= pacienteCpf.getText();
+        String telefone=pacienteTelefone.getText();
+        String arrayNome [] = pacienteNome.getText().split(" ");
 
         for(int i =0 ;i<arrayNome.length;i++){
             if (arrayNome[i]!=" " && i<1){
@@ -60,9 +52,10 @@ public class CadastroMedicoController {
                 String sobrenome=arrayNome[i];
             }
         }
-        LocalDate myDate = medicoData.getValue();
+        LocalDate myDate = pacienteData.getValue();
         String myFormattedDate =myDate.format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
         String dataNascimento=myFormattedDate;
+
 
     }
 
@@ -74,15 +67,10 @@ public class CadastroMedicoController {
     @FXML
     void limparCampos( ) {
 
-        medicoData.getEditor().clear();
-        medicoSexoH.setSelected(false);
-        medicoSexoM.setSelected(false);
-        medicoNome.setText("");
-        medicoCpf.setText("");
-        medicoCtps.setText("");
-        medicoTelefone.setText("");
-    }
-
+        pacienteData.getEditor().clear();
+        pacienteSexoH.setSelected(false);
+        pacienteSexoM.setSelected(false);
+        pacienteNome.setText("");
+        pacienteCpf.setText("");
+        pacienteTelefone.setText("");    }
 }
-
-
