@@ -59,7 +59,7 @@ public class Main {
 //        new ProntuarioDAO().search().forEach(medic-> System.out.println(medic.toString()));
 
 //        Prontuario prontuario = new Prontuario(paciente,"A+", "Paciente gosta de um cigarrinho",new Exame(),new PacienteAlergia());
-        new ProntuarioDAO().insert(prontuario);
+//        new ProntuarioDAO().insert(prontuario);
 ////        System.out.println(new PacienteAlergiaDAO().search(1).toString());
         new ProntuarioDAO().search().forEach(medic-> System.out.println(medic.toString()));
 //        System.out.println(prontuario.getPacienteAlergia().getIdPacienteAlergia());

@@ -101,16 +101,6 @@ public class Medico {
 
     @Override
     public String toString() {
-        return "Medico{" +
-                "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", data_nascimento='" + data_nascimento + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", numeroCTPS=" + numeroCTPS +
-                ", cr='" + cr + '\'' +
-                ", sexo='" + sexo + '\'' +
-                ", especialidade='" + especialidade + '\'' +
-                '}';
+        return  nome + " " +sobrenome;
     }
 }
