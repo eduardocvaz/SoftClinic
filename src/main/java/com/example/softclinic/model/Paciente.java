@@ -68,4 +68,16 @@ public class Paciente {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
+
+    @Override
+    public String toString() {
+        return "Paciente{" +
+                "nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", data_nascimento='" + data_nascimento + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", telefone='" + telefone + '\'' +
+                '}';
+    }
 }

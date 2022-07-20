@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.softclinic.controller.HomeAtendenteController">
+   <children>
+      <ToolBar prefHeight="20.0" prefWidth="600.0">
+         <items>
+            <MenuButton mnemonicParsing="false" text="Consulta">
+              <items>
+                <MenuItem fx:id="botaoMarcar" mnemonicParsing="false" onAction="#marcarConsulta" text="Marcar Consulta" />
+                <MenuItem fx:id="botaoRemarcar" mnemonicParsing="false" onAction="#remarcarConsulta" text="Remarcar Consulta" />
+                  <MenuItem fx:id="botaoRemarcar2" mnemonicParsing="false" onAction="#remarcarConsulta" text="Editar Consulta" />
+                  <MenuItem fx:id="botaoCancelar" mnemonicParsing="false" onAction="#cancelarConsulta" text="Cancelar Consulta" />
+                  <MenuItem fx:id="botaoagenda" mnemonicParsing="false" onAction="#verificarAgenda" text="Agenda de Consultas" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Paciente">
+               <items>
+                  <MenuItem fx:id="botaoCadastrar" mnemonicParsing="false" onAction="#cadastrarPaciente" text="Cadastrar Paciente" />
+                  <MenuItem fx:id="botaoRemover" mnemonicParsing="false" onAction="#removerPaciente" text="Remover Paciente" />
+                  <MenuItem fx:id="botaoEditar" mnemonicParsing="false" onAction="#editarPaciente" text="Editar Paciente" />
+               </items>
+            </MenuButton>
+            <Button fx:id="botaoSair" mnemonicParsing="false" onAction="#fecharSistema" text="Sair" />
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>

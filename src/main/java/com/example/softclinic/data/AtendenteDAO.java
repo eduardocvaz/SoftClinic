@@ -26,9 +26,7 @@ public class AtendenteDAO {
                 atendente = this.buildAtendente(rs);
                 System.out.println(atendente.getNome());
             }
-        }catch(SQLException e){
-            e.printStackTrace();
-        }catch(ClassNotFoundException e){
+        }catch(SQLException | ClassNotFoundException e){
             e.printStackTrace();
         }
         return atendente;
@@ -44,6 +42,8 @@ public class AtendenteDAO {
                 Atendente e = this.buildAtendente(rs);
                 atend.add(e);
             }
+            fechar();
+            return atend;
         } catch (SQLException | ClassNotFoundException e){
             e.printStackTrace();
         }
@@ -65,7 +65,7 @@ public class AtendenteDAO {
             conectar();
 
             StringBuffer buffer = new StringBuffer();
-            buffer.append("INSERT INTO ATENDENT (");
+            buffer.append("INSERT INTO ATENDENTE (");
             buffer.append(this.retornarCamposBD());
             buffer.append(") VALUES (");
             buffer.append(retornarValoresBD(atendente));
@@ -84,7 +84,7 @@ public class AtendenteDAO {
         try {
             conectar();
             StringBuffer buffer = new StringBuffer();
-            buffer.append("UPDATE medico SET ");
+            buffer.append("UPDATE atendente SET ");
             buffer.append(returnFieldValuesBD(atendente));
             buffer.append(" WHERE CPF=");
             buffer.append(this.retornarValorStringBD(atendente.getCpf()));
@@ -178,8 +178,9 @@ public class AtendenteDAO {
             atendente.setNome(rs.getString("nome"));
             atendente.setSobrenome(rs.getString("sobrenome"));
             atendente.setData_nascimento(rs.getDate("data_nascimento").toString());
+            atendente.setTelefone(rs.getString("telefone"));
             atendente.setSexo(rs.getString("sexo"));
-            atendente.getNumeroCTPS(rs.getInt("numeroctps"));
+            atendente.setNumeroCTPS(rs.getInt("numeroctps"));
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

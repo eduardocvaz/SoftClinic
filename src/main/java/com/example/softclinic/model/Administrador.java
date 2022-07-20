@@ -8,6 +8,23 @@ public class Administrador {
     private String sexo;
     private String telefone;
 
+    private int numeroCTPS;
+
+
+    public Administrador(String nome, String sobrenome, String cpf, String data_nascimento, String sexo, String telefone, int numeroCTPS) {
+        this.nome = nome;
+        this.sobrenome = sobrenome;
+        this.cpf = cpf;
+        this.data_nascimento = data_nascimento;
+        this.sexo = sexo;
+        this.telefone = telefone;
+        this.numeroCTPS = numeroCTPS;
+    }
+
+    public Administrador() {
+
+    }
+
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
@@ -32,10 +49,6 @@ public class Administrador {
         return sobrenome;
     }
 
-    public void setsobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
-    }
-
     public String getCpf() {
         return cpf;
     }
@@ -58,5 +71,26 @@ public class Administrador {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    public int getNumeroCTPS() {
+        return numeroCTPS;
+    }
+
+    public void setNumeroCTPS(int numeroCTPS) {
+        this.numeroCTPS = numeroCTPS;
+    }
+
+    @Override
+    public String toString() {
+        return "Administrador{" +
+                "nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", data_nascimento='" + data_nascimento + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", numeroCTPS=" + numeroCTPS +
+                '}';
     }
 }

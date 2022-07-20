@@ -21,12 +21,13 @@ public class Atendente{
         this.telefone = telefone;
     }
 
-    public Atendente(String nome, String sobrenome, String cpf, String data_nascimento,String telefone ,int numeroCTPS, String sexo) {
+    public Atendente(String nome, String sobrenome, String cpf, String data_nascimento, int numeroCTPS, String telefone, String sexo) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.data_nascimento = data_nascimento;
         this.numeroCTPS = numeroCTPS;
+        this.telefone = telefone;
         this.sexo = sexo;
         this.telefone=telefone;
     }
@@ -81,5 +82,18 @@ public class Atendente{
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    @Override
+    public String toString() {
+        return "Atendente{" +
+                "nome='" + nome + '\'' +
+                ", sobrenome='" + sobrenome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", data_nascimento='" + data_nascimento + '\'' +
+                ", numeroCTPS=" + numeroCTPS +
+                ", telefone='" + telefone + '\'' +
+                ", sexo='" + sexo + '\'' +
+                '}';
     }
 }

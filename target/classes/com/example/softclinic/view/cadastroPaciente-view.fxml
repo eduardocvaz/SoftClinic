@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <GridPane layoutX="28.0" layoutY="135.0" prefHeight="141.0" prefWidth="583.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="372.0" minWidth="10.0" prefWidth="372.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="266.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="98.0" minHeight="0.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="245.0" minHeight="6.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="286.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="286.0" minHeight="0.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="286.0" minHeight="9.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="286.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
+                <TextField fx:id="pacienteNome" prefHeight="26.0" prefWidth="342.0" GridPane.rowIndex="1" />
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="19.0" prefWidth="357.0" GridPane.rowIndex="3">
+                    <children>
+                        <TextField fx:id="pacienteCpf" />
+                    </children>
+                </HBox>
+                <DatePicker fx:id="pacienteData" prefHeight="26.0" prefWidth="240.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </DatePicker>
+                <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                    <children>
+                        <RadioButton fx:id="pacienteSexoH" mnemonicParsing="false" text="Homem">
+                            <HBox.margin>
+                                <Insets left="13.0" top="3.0" />
+                            </HBox.margin>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="sexo" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="pacienteSexoM" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Mulher" toggleGroup="$sexo">
+                            <HBox.margin>
+                                <Insets left="15.0" top="3.0" />
+                            </HBox.margin>
+                        </RadioButton>
+                    </children>
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </HBox>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sexo" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets left="13.0" />
+                    </GridPane.margin>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone" GridPane.rowIndex="4" />
+                <TextField fx:id="pacienteTelefone" GridPane.rowIndex="5">
+                    <GridPane.margin>
+                        <Insets right="80.0" />
+                    </GridPane.margin>
+                </TextField>
+            </children>
+        </GridPane>
+        <Pane layoutY="-1.0" prefHeight="81.0" prefWidth="638.0">
+            <children>
+                <Text layoutX="208.0" layoutY="50.0" strokeWidth="0.0" text="Cadastro Paciente" wrappingWidth="222.4599609375">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+        <HBox layoutX="293.0" layoutY="344.0" prefHeight="28.0" prefWidth="318.0">
+            <children>
+                <Button fx:id="botaoCadastrar" mnemonicParsing="false" onAction="#cadastrarPaciente" text="Cadastrar">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="botaoLimparCampo" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#limparCampos" text="Limpar Campos">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="botaoCancelar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelarCadastro" text="Cancelar">
+                    <HBox.margin>
+                        <Insets right="10.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
