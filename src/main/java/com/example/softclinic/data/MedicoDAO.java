@@ -1,6 +1,7 @@
 package com.example.softclinic.data;
 
 import com.example.softclinic.data.connection.ConFactory;
+import com.example.softclinic.model.Atendente;
 import com.example.softclinic.model.Medico;
 
 import java.sql.Connection;
@@ -210,4 +211,6 @@ public class MedicoDAO {
         }
         return medico;
     }
+
 }
+

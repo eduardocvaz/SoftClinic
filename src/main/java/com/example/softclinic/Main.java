@@ -14,6 +14,7 @@ public class Main {
         //"cpf, nome, sobrenome, data_nascimento, telefone, sexo, cr, especialidade, numeroctps"
         Medico medico = new Medico("11111111111", "teste", "do teste", "2012-09-13","9999999",1111,"1111","F","Clinico geral");
 
+
 //        //new MedicoDAO().insert(medico);
 //        System.out.println(new MedicoDAO().search("11111111111").toString());
 //        new MedicoDAO().search().forEach(medic-> System.out.println(medic.toString()));
@@ -62,6 +63,5 @@ public class Main {
 ////        System.out.println(new PacienteAlergiaDAO().search(1).toString());
         new ProntuarioDAO().search().forEach(medic-> System.out.println(medic.toString()));
 //        System.out.println(prontuario.getPacienteAlergia().getIdPacienteAlergia());
-
     }
 }

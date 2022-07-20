@@ -1,5 +1,9 @@
 package com.example.softclinic.controller;
 
+import com.example.softclinic.data.AtendenteDAO;
+import com.example.softclinic.data.MedicoDAO;
+import com.example.softclinic.model.Atendente;
+import com.example.softclinic.model.Medico;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -55,21 +59,23 @@ public class CadastroAtendenteController {
         RadioButton radio = (RadioButton) sexo.getSelectedToggle();
         String sexo = radio.getText();
         String cpf= atendenteCpf.getText();
-        String ctps=atendenteCtps.getText();
+        int ctps= Integer.parseInt( atendenteCtps.getText());
         String telefone=atendenteTelefone.getText();
         String arrayNome [] = atendenteNome.getText().split(" ");
-
+        String nome ="";
+        String sobrenome="";
         for(int i =0 ;i<arrayNome.length;i++){
             if (arrayNome[i]!=" " && i<1){
-                String nome=arrayNome[i];
+                nome=arrayNome[i];
             }else if (arrayNome[i]!=" " && i>=1){
-                String sobrenome=arrayNome[i];
+                sobrenome=arrayNome[i];
             }
         }
         LocalDate myDate = atendenteData.getValue();
         String myFormattedDate =myDate.format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
         String dataNascimento=myFormattedDate;
-
+        Atendente atendente = new Atendente(nome,sobrenome,cpf,dataNascimento,telefone,ctps,sexo);
+        new AtendenteDAO().insert(atendente);
 
     }
     @FXML

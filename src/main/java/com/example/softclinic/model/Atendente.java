@@ -29,6 +29,7 @@ public class Atendente{
         this.numeroCTPS = numeroCTPS;
         this.telefone = telefone;
         this.sexo = sexo;
+        this.telefone=telefone;
     }
 
     public Atendente() {

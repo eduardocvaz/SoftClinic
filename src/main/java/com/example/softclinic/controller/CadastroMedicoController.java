@@ -1,5 +1,7 @@
 package com.example.softclinic.controller;
 
+import com.example.softclinic.data.MedicoDAO;
+import com.example.softclinic.model.Medico;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -33,6 +35,8 @@ public class CadastroMedicoController {
 
     @FXML
     private TextField medicoCr;
+    @FXML
+    private TextField medicoEspecialidade;
 
     @FXML
     private Button botaoCadastrar;
@@ -48,27 +52,38 @@ public class CadastroMedicoController {
         RadioButton radio = (RadioButton) sexo.getSelectedToggle();
         String sexo = radio.getText();
         String cpf= medicoCpf.getText();
-        String ctps=medicoCtps.getText();
+        int ctps= Integer.parseInt( medicoCtps.getText());
         String cr=medicoCr.getText();
         String telefone=medicoTelefone.getText();
         String arrayNome [] = medicoNome.getText().split(" ");
-
+        String especialidade=medicoEspecialidade.getText();
+        String nome="";
+        String sobrenome="";
         for(int i =0 ;i<arrayNome.length;i++){
             if (arrayNome[i]!=" " && i<1){
-                String nome=arrayNome[i];
+                nome=arrayNome[i];
             }else if (arrayNome[i]!=" " && i>=1){
-                String sobrenome=arrayNome[i];
+               sobrenome=arrayNome[i];
             }
         }
         LocalDate myDate = medicoData.getValue();
         String myFormattedDate =myDate.format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
         String dataNascimento=myFormattedDate;
+        Medico medico = new Medico(cpf, nome,sobrenome, dataNascimento,telefone,ctps,cr,sexo,especialidade);
+        new MedicoDAO().insert(medico);
 
     }
 
     @FXML
     void cancelarCadastro( ) {
 
+        medicoData.getEditor().clear();
+        medicoSexoH.setSelected(false);
+        medicoSexoM.setSelected(false);
+        medicoNome.setText("");
+        medicoCpf.setText("");
+        medicoCtps.setText("");
+        medicoTelefone.setText("");
     }
 
     @FXML
