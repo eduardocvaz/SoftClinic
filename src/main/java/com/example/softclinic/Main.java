@@ -1,7 +1,7 @@
 package com.example.softclinic;
 
 import com.example.softclinic.data.*;
-import com.example.softclinic.data.connection.ProntuarioDAO;
+import com.example.softclinic.data.ProntuarioDAO;
 import com.example.softclinic.model.*;
 
 import java.text.SimpleDateFormat;

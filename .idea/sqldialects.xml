@@ -8,6 +8,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/example/softclinic/data/MedicoDAO.java" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/example/softclinic/data/PacienteAlergiaDAO.java" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/example/softclinic/data/PacienteDAO.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/example/softclinic/data/connection/ProntuarioDAO.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/example/softclinic/data/ProntuarioDAO.java" dialect="PostgreSQL" />
   </component>
 </project>

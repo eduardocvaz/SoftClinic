@@ -1,6 +1,7 @@
-package com.example.softclinic.data.connection;
+package com.example.softclinic.data;
 
 import com.example.softclinic.data.*;
+import com.example.softclinic.data.connection.ConFactory;
 import com.example.softclinic.model.Prontuario;
 
 import java.sql.Connection;

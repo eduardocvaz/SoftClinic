@@ -10,7 +10,7 @@ public class LoginApplication extends Application {
     private Stage s1 =new Stage();
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("/com/example/softclinic/view/login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         this.s1.setTitle("Login Screen!");
         this.s1.setScene(scene);
