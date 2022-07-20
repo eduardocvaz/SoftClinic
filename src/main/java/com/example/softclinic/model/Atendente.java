@@ -21,13 +21,14 @@ public class Atendente{
         this.telefone = telefone;
     }
 
-    public Atendente(String nome, String sobrenome, String cpf, String data_nascimento, int numeroCTPS, String sexo) {
+    public Atendente(String nome, String sobrenome, String cpf, String data_nascimento,String telefone ,int numeroCTPS, String sexo) {
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.cpf = cpf;
         this.data_nascimento = data_nascimento;
         this.numeroCTPS = numeroCTPS;
         this.sexo = sexo;
+        this.telefone=telefone;
     }
 
     public Atendente() {

@@ -1,5 +1,9 @@
 package com.example.softclinic.controller;
 
+import com.example.softclinic.data.MedicoDAO;
+import com.example.softclinic.data.PacienteDAO;
+import com.example.softclinic.model.Medico;
+import com.example.softclinic.model.Paciente;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
@@ -44,23 +48,33 @@ public class CadastroPacienteController {
         String cpf= pacienteCpf.getText();
         String telefone=pacienteTelefone.getText();
         String arrayNome [] = pacienteNome.getText().split(" ");
-
+        String nome="";
+        String sobrenome="";
         for(int i =0 ;i<arrayNome.length;i++){
             if (arrayNome[i]!=" " && i<1){
-                String nome=arrayNome[i];
+                nome=arrayNome[i];
             }else if (arrayNome[i]!=" " && i>=1){
-                String sobrenome=arrayNome[i];
+               sobrenome=arrayNome[i];
             }
         }
         LocalDate myDate = pacienteData.getValue();
         String myFormattedDate =myDate.format(DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
         String dataNascimento=myFormattedDate;
 
+        Paciente paciente = new Paciente(cpf, nome,sobrenome, dataNascimento,telefone,sexo);
+        new PacienteDAO().insert(paciente);
 
     }
 
     @FXML
     void cancelarCadastro( ) {
+
+        pacienteData.getEditor().clear();
+        pacienteSexoH.setSelected(false);
+        pacienteSexoM.setSelected(false);
+        pacienteNome.setText("");
+        pacienteCpf.setText("");
+        pacienteTelefone.setText("");
 
     }
 
